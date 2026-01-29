@@ -13,7 +13,7 @@ const Header = ({ onOpenDemo, onOpenWaitlist }: HeaderProps) => {
   const navLinks = [
     { label: "Features", href: "#features" },
     { label: "How It Works", href: "#how-it-works" },
-    { label: "Testimonials", href: "#testimonials" },
+    // { label: "Testimonials", href: "#testimonials" },
   ];
 
   const scrollToSection = (href: string) => {
