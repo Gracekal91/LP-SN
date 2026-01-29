@@ -42,8 +42,8 @@ const DownloadSection = () => {
                 {/* App Store Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3 mb-6">
                   {/* Apple App Store */}
-                  <a 
-                    href="#" 
+                  <a
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSfhDi3CYH0OKdQdRq8nvGNUTaSAZnsWNT8lZ59KWah1Ev4Whg/viewform?usp=sharing&ouid=103191188960058496730" target="_blank"
                     className="group flex items-center gap-2 px-4 py-3 rounded-xl bg-secondary/50 border border-border/30 hover:border-primary/30 hover:bg-primary/10 transition-all duration-300"
                   >
                     <svg viewBox="0 0 24 24" className="w-6 h-6 text-foreground" fill="currentColor">
@@ -56,8 +56,8 @@ const DownloadSection = () => {
                   </a>
                   
                   {/* Google Play */}
-                  <a 
-                    href="#" 
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfhDi3CYH0OKdQdRq8nvGNUTaSAZnsWNT8lZ59KWah1Ev4Whg/viewform?usp=sharing&ouid=103191188960058496730" target="_blank"
                     className="group flex items-center gap-2 px-4 py-3 rounded-xl bg-secondary/50 border border-border/30 hover:border-primary/30 hover:bg-primary/10 transition-all duration-300"
                   >
                     <svg viewBox="0 0 24 24" className="w-6 h-6" fill="currentColor">

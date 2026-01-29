@@ -26,7 +26,7 @@ const Index = () => {
         <HowItWorks />
         <DownloadSection />
         <FAQSection />
-        <Testimonials />
+
         <CTASection onOpenDemo={() => setIsDemoOpen(true)} onOpenWaitlist={() => setIsWaitlistOpen(true)} />
       </main>
       <Footer />

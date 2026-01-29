@@ -35,21 +35,24 @@ const CTASection = ({ onOpenDemo, onOpenWaitlist }: CTASectionProps) => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
+          {/*<Button*/}
+          {/*  size="lg"*/}
+          {/*  className="gradient-accent text-primary-foreground font-semibold rounded-xl px-6 py-4 text-base btn-glow group"*/}
+          {/*>*/}
+          {/*    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhDi3CYH0OKdQdRq8nvGNUTaSAZnsWNT8lZ59KWah1Ev4Whg/viewform?usp=sharing&ouid=103191188960058496730" target="_blank">*/}
+          {/*          Request a Demo*/}
+          {/*    </a>*/}
+          {/*  <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />*/}
+          {/*</Button>*/}
           <Button
-            onClick={onOpenDemo}
-            size="lg"
-            className="gradient-accent text-primary-foreground font-semibold rounded-xl px-6 py-4 text-base btn-glow group"
-          >
-            Request a Demo
-            <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
-          </Button>
-          <Button
-            onClick={onOpenWaitlist}
+            // onClick={onOpenWaitlist}
             variant="outline"
             size="lg"
             className="border-border/50 bg-secondary/50 text-foreground hover:bg-secondary hover:border-primary/30 rounded-xl px-6 py-4 text-base backdrop-blur-sm"
           >
-            Join Early Access
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhDi3CYH0OKdQdRq8nvGNUTaSAZnsWNT8lZ59KWah1Ev4Whg/viewform?usp=sharing&ouid=103191188960058496730" target="_blank">
+                  Join Early Access
+              </a>
           </Button>
         </div>
 

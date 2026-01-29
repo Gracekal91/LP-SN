@@ -27,7 +27,7 @@ const Header = ({ onOpenDemo, onOpenWaitlist }: HeaderProps) => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-4 py-4">
       <div className="container max-w-6xl mx-auto">
-        <nav className="glass-header rounded-2xl px-6 py-4 flex items-center justify-between">
+        <nav className="glass-header rounded-2xl px-6 py-2 flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-xl gradient-accent flex items-center justify-center">
@@ -53,10 +53,12 @@ const Header = ({ onOpenDemo, onOpenWaitlist }: HeaderProps) => {
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center gap-3">
             <Button
-              onClick={onOpenWaitlist}
+              // onClick={onOpenWaitlist}
               className="gradient-accent text-primary-foreground font-semibold rounded-xl px-6"
             >
-              Join Waiting List
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhDi3CYH0OKdQdRq8nvGNUTaSAZnsWNT8lZ59KWah1Ev4Whg/viewform?usp=sharing&ouid=103191188960058496730" target="_blank">
+                    Join Waiting List
+                </a>
             </Button>
           </div>
 
@@ -84,13 +86,15 @@ const Header = ({ onOpenDemo, onOpenWaitlist }: HeaderProps) => {
               ))}
               <hr className="border-border/50" />
               <Button
-                onClick={() => {
-                  onOpenWaitlist();
-                  setIsMobileMenuOpen(false);
-                }}
+                // onClick={() => {
+                //   onOpenWaitlist();
+                //   setIsMobileMenuOpen(false);
+                // }}
                 className="gradient-accent text-primary-foreground font-semibold rounded-xl"
               >
-                Join Waiting List
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhDi3CYH0OKdQdRq8nvGNUTaSAZnsWNT8lZ59KWah1Ev4Whg/viewform?usp=sharing&ouid=103191188960058496730" target="_blank">
+                      Join Waiting List
+                  </a>
               </Button>
             </div>
           </div>

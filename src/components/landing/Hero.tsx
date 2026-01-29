@@ -25,7 +25,7 @@ const Hero = ({ onOpenDemo, onOpenWaitlist }: HeroProps) => {
         <div className="text-center max-w-4xl mx-auto">
           {/* Trust Badge */}
           <div 
-            className="inline-flex items-center gap-2 md:gap-3 px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-secondary/50 border border-border/30 backdrop-blur-sm mb-4 md:mb-8 animate-fade-in-up"
+            className="inline-flex items-center gap-2 md:gap-3 px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-secondary/50 border border-border/30 backdrop-blur-sm mb-4 mt-2 md:mb-8 animate-fade-in-up"
             style={{ animationDelay: '0.1s' }}
           >
             <span className="text-xs md:text-sm text-muted-foreground">Trusted by Schools</span>
@@ -65,28 +65,31 @@ const Hero = ({ onOpenDemo, onOpenWaitlist }: HeroProps) => {
             style={{ animationDelay: '0.4s' }}
           >
             <Button
-              onClick={() => {
-                onOpenDemo();
-                navigate('/contact');
-              }}
+              // onClick={() => {
+              //   onOpenDemo();
+              //   navigate('/contact');
+              // }}
+
               size="lg"
               className="w-full sm:w-auto bg-foreground text-background hover:bg-foreground/90 font-semibold rounded-xl px-6 py-4 text-base group"
             >
-              Request a Demo
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhDi3CYH0OKdQdRq8nvGNUTaSAZnsWNT8lZ59KWah1Ev4Whg/viewform?usp=sharing&ouid=103191188960058496730" target="_blank">
+                    Request a Demo
+                </a>
               <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button
-              onClick={() => {
-                onOpenWaitlist();
-                navigate('/documentation');
-              }}
-              variant="outline"
-              size="lg"
-              className="w-full sm:w-auto border-border/50 bg-secondary/30 text-foreground hover:bg-secondary/50 rounded-xl px-6 py-4 text-base backdrop-blur-sm"
-            >
-              <Play size={16} className="mr-2" />
-              Watch Video
-            </Button>
+            {/*<Button*/}
+            {/*  onClick={() => {*/}
+            {/*    onOpenWaitlist();*/}
+            {/*    navigate('/documentation');*/}
+            {/*  }}*/}
+            {/*  variant="outline"*/}
+            {/*  size="lg"*/}
+            {/*  className="w-full sm:w-auto border-border/50 bg-secondary/30 text-foreground hover:bg-secondary/50 rounded-xl px-6 py-4 text-base backdrop-blur-sm"*/}
+            {/*>*/}
+            {/*  <Play size={16} className="mr-2" />*/}
+            {/*  Watch Video*/}
+            {/*</Button>*/}
           </div>
         </div>
 

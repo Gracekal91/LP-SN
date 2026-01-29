@@ -15,17 +15,17 @@ const footerLinks = {
     { label: "Community", href: "/community" },
   ],
   company: [
-    { label: "About Us", href: "/about" },
-    { label: "Careers", href: "/careers" },
-    { label: "Contact", href: "/contact" },
-    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "About Us", href: "/" }, // about
+    { label: "Careers", href: "/" }, // careers
+    { label: "Contact", href: "/" }, // contact
+    { label: "Privacy Policy", href: "/" }, // privacy-policy
   ],
 };
 
 const socialLinks = [
   { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Facebook, href: "#", label: "Facebook" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/gtechlabs/?viewAsMember=true", label: "LinkedIn" },
+  { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61571533365025&notif_id=1768957806199724&notif_t=page_user_activity&ref=notif#", label: "Facebook" },
   { icon: Instagram, href: "#", label: "Instagram" },
 ];
 
@@ -54,6 +54,7 @@ const Footer = () => {
                     href={social.href}
                     aria-label={social.label}
                     className="w-10 h-10 rounded-lg bg-secondary/50 hover:bg-primary/20 flex items-center justify-center text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
+                    target="_blank"
                   >
                     <social.icon size={18} />
                   </a>
