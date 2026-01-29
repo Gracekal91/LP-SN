@@ -1,151 +1,91 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* School Network Design System - Premium Dark SaaS Theme */
 
 @layer base {
   :root {
-    --background: 209 40% 96%;
-    --foreground: 222 47% 11%;
-
-    --card: 210 40% 98%;
-    --card-foreground: 222 47% 11%;
-
-    --popover: 214 31% 91%;
-    --popover-foreground: 222 47% 11%;
-
-    --primary: 200 98% 39%;
-    --primary-foreground: 204 100% 97%;
-
-    --secondary: 215 24% 26%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 215 20% 65%;
-    --muted-foreground: 222 47% 11%;
-
-    --accent: 210 40% 98%;
-    --accent-foreground: 215 19% 34%;
-
-    --destructive: 0 72% 50%;
-    --destructive-foreground: 0 85% 97%;
-
-    --border: 212 26% 83%;
-    --input: 212 26% 83%;
-    --ring: 200 98% 39%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 222 47% 11%;
-
-    --sidebar-primary: 200 98% 39%;
-
-    --sidebar-primary-foreground: 204 100% 97%;
-
-    --sidebar-accent: 215 24% 26%;
-
-    --sidebar-accent-foreground: 210 40% 98%;
-
-    --sidebar-border: 212 26% 83%;
-
-    --sidebar-ring: 200 98% 39%;
-
-    --chart-1: 198 93% 59%;
-
-    --chart-2: 213 93% 67%;
-
-    --chart-3: 215 20% 65%;
-
-    --chart-4: 215 16% 46%;
-
-    --chart-5: 215 19% 34%;
-
-    --sidebar: 210 40% 98%;
-
-    --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
-
-    --font-serif: "Libre Baskerville", ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
-
-    --font-mono: "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-
-    --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
-
-    --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
-
-    --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
-
-    --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
-
-    --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
-
-    --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 4px 6px -1px hsl(0 0% 0% / 0.1);
-
-    --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 8px 10px -1px hsl(0 0% 0% / 0.1);
-
-    --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
-
-    --tracking-normal: 0em;
-
-    --spacing: 0.25rem;
-  }
-
-  .dark {
-    --background: 222 47% 11%;
+    /* Dark Navy Theme - Always dark */
+    --background: 220 30% 8%;
     --foreground: 210 40% 98%;
 
-    --card: 217 32% 17%;
+    --card: 220 30% 12%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 215 24% 26%;
+    --popover: 220 30% 10%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 198 93% 59%;
-    --primary-foreground: 204 80% 15%;
+    /* Soft Blue Primary */
+    --primary: 210 100% 60%;
+    --primary-foreground: 220 30% 8%;
 
-    --secondary: 212 26% 83%;
-    --secondary-foreground: 228 84% 4%;
+    /* Glass Secondary */
+    --secondary: 220 30% 18%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 215 16% 46%;
-    --muted-foreground: 210 40% 98%;
+    --muted: 220 25% 20%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 228 84% 4%;
-    --accent-foreground: 215 20% 65%;
+    /* Blue Accent */
+    --accent: 210 100% 55%;
+    --accent-foreground: 220 30% 8%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 85% 97%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 215 19% 34%;
-    --input: 215 19% 34%;
-    --ring: 198 93% 59%;
-    --sidebar-background: 240 5.9% 10%;
+    --border: 220 20% 20%;
+    --input: 220 25% 15%;
+    --ring: 210 100% 60%;
+
+    --radius: 0.75rem;
+
+    /* Custom Glass Effect Variables */
+    --glass-bg: 220 30% 12%;
+    --glass-border: 220 20% 25%;
+    --glass-blur: 12px;
+
+    /* Gradient Colors */
+    --gradient-start: 220 30% 6%;
+    --gradient-end: 220 30% 12%;
+    --gradient-accent: 210 100% 50%;
+
+    /* Shadows */
+    --shadow-card: 0 20px 40px hsla(220, 30%, 4%, 0.35);
+    --shadow-header: 0 10px 30px hsla(220, 30%, 4%, 0.25);
+    --shadow-glow: 0 0 40px hsla(210, 100%, 60%, 0.2);
+
+    --sidebar-background: 220 30% 10%;
     --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 198 93% 59%;
-    --sidebar-primary-foreground: 204 80% 15%;
-    --sidebar-accent: 215 20% 65%;
-    --sidebar-accent-foreground: 228 84% 4%;
-    --sidebar-border: 215 19% 34%;
-    --sidebar-ring: 198 93% 59%;
-    --chart-1: 199 95% 73%;
-    --chart-2: 211 96% 78%;
-    --chart-3: 215 20% 65%;
-    --chart-4: 215 16% 46%;
-    --chart-5: 215 19% 34%;
-    --sidebar: 217 32% 17%;
-    --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
-    --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
-    --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
-    --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
-    --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
-    --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 4px 6px -1px hsl(0 0% 0% / 0.1);
-    --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 8px 10px -1px hsl(0 0% 0% / 0.1);
-    --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+    --sidebar-primary: 210 100% 60%;
+    --sidebar-primary-foreground: 220 30% 8%;
+    --sidebar-accent: 220 30% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 20% 20%;
+    --sidebar-ring: 210 100% 60%;
+  }
+
+  /* Remove dark class variants - always dark theme */
+  .dark {
+    --background: 220 30% 8%;
+    --foreground: 210 40% 98%;
+    --card: 220 30% 12%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 30% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 100% 60%;
+    --primary-foreground: 220 30% 8%;
+    --secondary: 220 30% 18%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 25% 20%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 210 100% 55%;
+    --accent-foreground: 220 30% 8%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 20% 20%;
+    --input: 220 25% 15%;
+    --ring: 210 100% 60%;
   }
 }
 
@@ -155,16 +95,215 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
-    font-family: var(--font-sans);
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Glass Card Effect */
+  .glass-card {
+    @apply bg-card/75 backdrop-blur-xl border border-border/30 rounded-2xl;
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Glass Header Effect */
+  .glass-header {
+    @apply bg-card/60 backdrop-blur-xl border border-border/20;
+    box-shadow: var(--shadow-header);
+  }
+
+  /* Premium Button Glow */
+  .btn-glow {
+    @apply relative overflow-hidden;
+  }
+
+  .btn-glow::before {
+    content: '';
+    @apply absolute inset-0 bg-primary/20 blur-xl opacity-0 transition-opacity duration-300;
+  }
+
+  .btn-glow:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+
+  /* Premium Gradient Text with Animation */
+  .premium-gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      135deg,
+      hsl(195 100% 65%) 0%,
+      hsl(210 100% 60%) 25%,
+      hsl(220 100% 65%) 50%,
+      hsl(210 100% 60%) 75%,
+      hsl(195 100% 65%) 100%
+    );
+    background-size: 300% 300%;
+    animation: premiumGradientShift 6s ease infinite;
+    filter: drop-shadow(0 0 30px hsla(210, 100%, 60%, 0.3));
+  }
+
+  /* Gradient Background */
+  .gradient-bg {
+    background: linear-gradient(135deg, hsl(var(--gradient-start)) 0%, hsl(var(--gradient-end)) 100%);
+  }
+
+  /* Accent Gradient */
+  .gradient-accent {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(210 100% 70%) 100%);
+  }
+
+  /* Hero Gradient Background */
+  .hero-gradient {
+    @apply relative;
+    background: 
+      radial-gradient(ellipse 80% 50% at 50% -20%, hsla(210, 100%, 60%, 0.15) 0%, transparent 50%),
+      linear-gradient(180deg, hsl(var(--gradient-start)) 0%, hsl(var(--background)) 100%);
+  }
+
+  /* Hero Light Gradient Background */
+  .hero-gradient-light {
+    @apply relative;
+    background: 
+      radial-gradient(ellipse 80% 50% at 50% 0%, hsla(210, 100%, 60%, 0.08) 0%, transparent 60%),
+      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(220 30% 10%) 100%);
+  }
+
+  /* Dot Grid Pattern */
+  .dot-grid-pattern {
+    background-image: radial-gradient(circle, hsl(var(--muted-foreground) / 0.15) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Floating Pill Animation */
+  .floating-pill {
+    animation: floatPill 6s ease-in-out infinite;
+  }
+
+  .floating-pill-delayed {
+    animation: floatPill 6s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+
+  /* Dashboard Mockup */
+  .dashboard-mockup {
+    box-shadow: 
+      0 25px 50px -12px hsla(220, 30%, 4%, 0.5),
+      0 0 0 1px hsla(var(--border) / 0.1),
+      0 0 100px hsla(210, 100%, 60%, 0.1);
+  }
+
+  /* Perspective for 3D effect */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  /* CTA Section Gradient */
+  .cta-gradient {
+    background: 
+      radial-gradient(ellipse 100% 100% at 50% 100%, hsla(210, 100%, 60%, 0.2) 0%, transparent 50%),
+      linear-gradient(0deg, hsl(var(--gradient-start)) 0%, hsl(var(--background)) 100%);
+  }
+
+  /* Feature Card Hover */
+  .feature-card {
+    @apply glass-card p-6 transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .feature-card:hover {
+    box-shadow: var(--shadow-card), var(--shadow-glow);
+    border-color: hsl(var(--primary) / 0.3);
+  }
+
+  /* Step Badge */
+  .step-badge {
+    @apply w-10 h-10 rounded-lg flex items-center justify-center font-bold text-xs;
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(210 100% 70%) 100%);
+    color: hsl(var(--primary-foreground));
+  }
+
+  /* Testimonial Card */
+  .testimonial-card {
+    @apply glass-card p-8 min-w-[320px] md:min-w-[400px];
+  }
+
+  /* Phone Mockup */
+  .phone-mockup {
+    @apply relative rounded-[40px] p-2 bg-gradient-to-b from-secondary to-muted;
+    box-shadow: var(--shadow-card);
+  }
+
+  .phone-screen {
+    @apply rounded-[32px] overflow-hidden bg-background;
+  }
+
+  /* Floating Footer Card */
+  .floating-footer {
+    background: linear-gradient(180deg, hsl(var(--card)) 0%, hsl(var(--background)) 100%);
+    box-shadow: 
+      0 -20px 60px hsla(220, 30%, 4%, 0.4),
+      0 20px 60px hsla(220, 30%, 4%, 0.4),
+      0 0 100px hsla(210, 100%, 60%, 0.08),
+      inset 0 1px 0 hsla(210, 100%, 60%, 0.15);
+    border: 1px solid hsla(210, 100%, 60%, 0.1);
+  }
+
+  /* Scroll Animation Container */
+  .scroll-animate {
+    @apply opacity-0 translate-y-8;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .scroll-animate.is-visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .scroll-animate-stagger {
+    @apply opacity-0 translate-y-8;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .scroll-animate-stagger.is-visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Card Entrance Animation */
+  .card-entrance {
+    @apply opacity-0 translate-y-8;
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-entrance.is-visible {
+    @apply opacity-100 translate-y-0;
   }
 }
 
 @layer utilities {
-  @keyframes fade-in {
+  /* Hover Scale */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+
+  /* Fade In Up Animation */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeInUp {
     from {
       opacity: 0;
-      transform: translateY(10px);
+      transform: translateY(30px);
     }
     to {
       opacity: 1;
@@ -172,20 +311,167 @@ All colors MUST be HSL.
     }
   }
 
+  /* Fade In Animation */
   .animate-fade-in {
-    animation: fade-in 0.8s ease-out forwards;
-    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
   }
 
-  html {
-    scroll-behavior: smooth;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
-  section {
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  /* Slide In Animation */
+  .animate-slide-in {
+    animation: slideIn 0.5s ease-out forwards;
   }
 
-  .animation-delay-200 {
-    animation-delay: 200ms;
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Premium Float Animation for Phone Mockup */
+  .animate-float-premium {
+    animation: floatPremium 6s ease-in-out infinite;
+  }
+
+  @keyframes floatPremium {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-15px) rotate(1deg);
+    }
+    75% {
+      transform: translateY(-15px) rotate(-1deg);
+    }
+  }
+
+  /* Float Pill Animation */
+  @keyframes floatPill {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+
+  /* Slow Pulse for glow effects */
+  .animate-pulse-slow {
+    animation: pulseSlow 4s ease-in-out infinite;
+  }
+
+  @keyframes pulseSlow {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(0.95);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+  }
+
+  /* Shimmer effect */
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  /* Gradient shift animation */
+  @keyframes gradientShift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  /* Premium gradient shift animation */
+  @keyframes premiumGradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Marquee animation - faster and smoother */
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Grayscale hover effect for logos */
+  .grayscale-hover {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+
+  .grayscale-hover:hover {
+    filter: grayscale(0%);
+  }
+
+  /* Pulse Glow Animation */
+  .animate-pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsla(210, 100%, 60%, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px hsla(210, 100%, 60%, 0.5);
+    }
+  }
+
+  /* Float Animation (legacy) */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
   }
 }
