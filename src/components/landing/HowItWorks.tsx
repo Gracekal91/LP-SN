@@ -1,31 +1,33 @@
 import useScrollAnimation from "@/hooks/useScrollAnimation";
-
-const steps = [
-  {
-    step: "01",
-    title: "Onboard Your School",
-    description: "Set up your school profile, add staff, classes and grade structures in minutes.",
-  },
-  {
-    step: "02",
-    title: "Import Students",
-    description: "Upload your student list and instantly link each learner to their parent via WhatsApp.",
-  },
-  {
-    step: "03",
-    title: "Automate Operations",
-    description: "Fee invoices, absence alerts, exam reminders and reports run automatically — no manual work.",
-  },
-  {
-    step: "04",
-    title: "Launch Mobile App",
-    description: "Parents and students go live on WhatsApp and the app — everything accessible in one tap.",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const HowItWorks = () => {
+  const { t } = useTranslation();
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation({ threshold: 0.2 });
   const { ref: stepsRef, isVisible: stepsVisible } = useScrollAnimation({ threshold: 0.1 });
+
+  const steps = [
+    {
+      step: "01",
+      title: t('howItWorks.steps.onboard.title'),
+      description: t('howItWorks.steps.onboard.description'),
+    },
+    {
+      step: "02",
+      title: t('howItWorks.steps.import.title'),
+      description: t('howItWorks.steps.import.description'),
+    },
+    {
+      step: "03",
+      title: t('howItWorks.steps.automate.title'),
+      description: t('howItWorks.steps.automate.description'),
+    },
+    {
+      step: "04",
+      title: t('howItWorks.steps.launch.title'),
+      description: t('howItWorks.steps.launch.description'),
+    },
+  ];
 
   return (
     <section id="how-it-works" className="py-24 px-4 scroll-mt-24 relative bg-background">
@@ -36,13 +38,13 @@ const HowItWorks = () => {
           className={`text-center mb-16 scroll-animate ${headerVisible ? 'is-visible' : ''}`}
         >
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold mb-4 uppercase tracking-wider">
-            Getting Started
+            {t('howItWorks.badge')}
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-tight text-foreground">
-            A Simple <span className="text-primary">4-Step Process</span>
+            {t('howItWorks.headline')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Transforming your school's digital infrastructure is easier than you think.
+            {t('howItWorks.subheading')}
           </p>
         </div>
 

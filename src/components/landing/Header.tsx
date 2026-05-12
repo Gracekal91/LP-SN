@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe, ChevronDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 interface HeaderProps {
   onOpenDemo: () => void;
@@ -8,8 +15,17 @@ interface HeaderProps {
 }
 
 const Header = ({ onOpenDemo, onOpenWaitlist }: HeaderProps) => {
+  const { t, i18n } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const languages = [
+    { code: 'en', name: 'English', flag: '🇬🇧' },
+    { code: 'pt', name: 'Português', flag: '🇵🇹' },
+    { code: 'fr', name: 'Français', flag: '🇫🇷' },
+  ];
+
+  const currentLanguage = languages.find(lang => lang.code === (i18n.language?.split('-')[0] || 'en')) || languages[0];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,9 +36,9 @@ const Header = ({ onOpenDemo, onOpenWaitlist }: HeaderProps) => {
   }, []);
 
   const navLinks = [
-    { label: "Features", href: "#features" },
-    { label: "How It Works", href: "#how-it-works" },
-    { label: "FAQ", href: "#faq" },
+    { label: t('nav.features'), href: "#features" },
+    { label: t('nav.howItWorks'), href: "#how-it-works" },
+    { label: t('nav.faq'), href: "#faq" },
   ];
 
   const scrollToSection = (href: string) => {
@@ -31,6 +47,10 @@ const Header = ({ onOpenDemo, onOpenWaitlist }: HeaderProps) => {
       element.scrollIntoView({ behavior: "smooth" });
     }
     setIsMobileMenuOpen(false);
+  };
+
+  const changeLanguage = (code: string) => {
+    i18n.changeLanguage(code);
   };
 
   return (
@@ -68,18 +88,45 @@ const Header = ({ onOpenDemo, onOpenWaitlist }: HeaderProps) => {
 
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center gap-3">
+            {/* Language Switcher */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className={`flex items-center gap-2 font-bold px-3 ${isScrolled ? 'text-white hover:bg-white/10' : 'text-foreground'}`}
+                >
+                  <Globe className="w-4 h-4" />
+                  <span className="hidden lg:inline">{currentLanguage.name}</span>
+                  <ChevronDown className="w-3 h-3 opacity-50" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-40 rounded-xl">
+                {languages.map((lang) => (
+                  <DropdownMenuItem
+                    key={lang.code}
+                    className="flex items-center justify-between font-medium cursor-pointer"
+                    onClick={() => changeLanguage(lang.code)}
+                  >
+                    <span>{lang.name}</span>
+                    <span className="text-lg">{lang.flag}</span>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <Button
               variant="ghost"
               className="font-bold text-sm text-white hover:bg-white/10"
               onClick={() => scrollToSection("#faq")}
             >
-              Contact
+              {t('nav.contact')}
             </Button>
             <Button
               className="font-bold rounded-full px-6 transition-all duration-300 hover:-translate-y-0.5 bg-white text-primary hover:bg-white/90 shadow-lg"
             >
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhDi3CYH0OKdQdRq8nvGNUTaSAZnsWNT8lZ59KWah1Ev4Whg/viewform?usp=sharing&ouid=103191188960058496730" target="_blank" rel="noopener noreferrer">
-                Get Started
+                {t('nav.getStarted')}
               </a>
             </Button>
           </div>
@@ -106,12 +153,34 @@ const Header = ({ onOpenDemo, onOpenWaitlist }: HeaderProps) => {
                   {link.label}
                 </button>
               ))}
+              
+              {/* Mobile Language Switcher */}
+              <div className="grid grid-cols-3 gap-2">
+                {languages.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => {
+                      changeLanguage(lang.code);
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className={`flex flex-col items-center justify-center py-2 rounded-xl border transition-all ${
+                      i18n.language?.startsWith(lang.code)
+                        ? "bg-white text-primary border-white"
+                        : "bg-white/10 text-white border-white/20"
+                    }`}
+                  >
+                    <span className="text-xl mb-1">{lang.flag}</span>
+                    <span className="text-xs font-bold">{lang.code.toUpperCase()}</span>
+                  </button>
+                ))}
+              </div>
+
               <hr className="border-white/10" />
               <Button
                 className="w-full font-bold h-14 rounded-full text-lg shadow-lg bg-white text-primary hover:bg-white/90"
               >
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhDi3CYH0OKdQdRq8nvGNUTaSAZnsWNT8lZ59KWah1Ev4Whg/viewform?usp=sharing&ouid=103191188960058496730" target="_blank" rel="noopener noreferrer">
-                  Get Started
+                  {t('nav.getStarted')}
                 </a>
               </Button>
             </div>

@@ -1,0 +1,193 @@
+{
+  "nav": {
+    "features": "Features",
+    "howItWorks": "How It Works",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "getStarted": "Get Started",
+    "requestDemo": "Request a Demo",
+    "pricing": "Pricing",
+    "documentation": "Documentation",
+    "helpCentre": "Help Centre",
+    "blog": "Blog",
+    "aboutUs": "About Us",
+    "careers": "Careers",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "hero": {
+    "badge": "School Management Platform — Parents · Schools · Students",
+    "headline": "Everything Your School Needs. One Platform. One Click.",
+    "subheading": "Parents pay fees, track progress and get absence alerts on WhatsApp. Schools manage students, finances and communication effortlessly. Students get AI-powered coaching before they fall behind — not after.",
+    "exploreFeatures": "Explore Features"
+  },
+  "features": {
+    "badge": "Comprehensive School Management",
+    "headline": "Empower Your Institution",
+    "subheading": "From fee payments to AI-powered student coaching — School Network keeps parents informed, schools organised, and students ahead. All through WhatsApp.",
+    "items": {
+      "admissions": {
+        "title": "Online Admissions",
+        "description": "Parents apply from their phone in minutes, no queues, no paperwork, no lost forms."
+      },
+      "messaging": {
+        "title": "Parent–School Messaging",
+        "description": "Message parents instantly via WhatsApp, no app download required, no message goes unread."
+      },
+      "timetables": {
+        "title": "Timetables & Materials",
+        "description": "Share academic calendars, class schedules, and learning materials directly with students and parents."
+      },
+      "payments": {
+        "title": "Fees & Payments",
+        "description": "Manage invoices, send payment reminders, and track fee collection with automated notifications."
+      },
+      "aiCoach": {
+        "title": "AI Student Coach",
+        "description": "Your AI coach spots struggling students immediately, not at the end of term when it's too late."
+      },
+      "announcements": {
+        "title": "Multi-Channel Announcements",
+        "description": "One click sends urgent announcements to every parent via WhatsApp, SMS and app - simultaneously."
+      }
+    }
+  },
+  "howItWorks": {
+    "badge": "Getting Started",
+    "headline": "A Simple 4-Step Process",
+    "subheading": "Transforming your school's digital infrastructure is easier than you think.",
+    "steps": {
+      "onboard": {
+        "title": "Onboard Your School",
+        "description": "Set up your school profile, add staff, classes and grade structures in minutes."
+      },
+      "import": {
+        "title": "Import Students",
+        "description": "Upload your student list and instantly link each learner to their parent via WhatsApp."
+      },
+      "automate": {
+        "title": "Automate Operations",
+        "description": "Fee invoices, absence alerts, exam reminders and reports run automatically — no manual work."
+      },
+      "launch": {
+        "title": "Launch Mobile App",
+        "description": "Parents and students go live on WhatsApp and the app — everything accessible in one tap."
+      }
+    }
+  },
+  "faq": {
+    "badge": "Support Center",
+    "headline": "Frequently Asked Questions",
+    "subheading": "Everything you need to know about School Network and how it can help your institution.",
+    "items": [
+      {
+        "question": "How do parents receive updates about their child?",
+        "answer": "Parents get instant WhatsApp notifications for everything — absences, exam results, fee invoices, school announcements, and progress reports. No app download needed. One tap on the WhatsApp message opens their full parent portal where they can view timetables, pay fees, and track their child's performance in real time."
+      },
+      {
+        "question": "Is my school's data secure?",
+        "answer": "All school and student data is encrypted and stored securely in the cloud. Only authorised staff can access student records. Parents can only see their own child's information. We are fully compliant with POPIA (South Africa's data protection law) and no data is ever shared with third parties."
+      },
+      {
+        "question": "What happens if a parent doesn't have WhatsApp?",
+        "answer": "Over 95% of parents use WhatsApp daily. For those who don't, School Network also sends SMS notifications and supports in-app messaging. No parent gets left behind."
+      },
+      {
+        "question": "How long does it take to set up School Network?",
+        "answer": "Most schools are fully live within one day. Your admin uploads the student list, links parents via phone number, and your school is ready to send its first WhatsApp notification. Our onboarding team guides you through every step — no IT experience required."
+      },
+      {
+        "question": "Does School Network replace SA-SAMS?",
+        "answer": "No — School Network works alongside SA-SAMS. SA-SAMS handles government reporting and compliance. School Network handles everything else: parent communication, fee collection, student progress tracking, AI coaching, and daily school operations. They complement each other perfectly."
+      },
+      {
+        "question": "Is there a mobile app for parents and teachers?",
+        "answer": "Yes. Parents and students access everything through the School Network app or directly via WhatsApp — whichever they prefer. School admins and teachers use a full web dashboard to manage students, finances, timetables, and communications from any device."
+      },
+      {
+        "question": "What does the AI student coach actually do?",
+        "answer": "The AI coach monitors each student's performance continuously — not just at the end of term. The moment a student starts falling below their expected level in any subject, the AI sends them a personalised alert with specific topics to revise and resources to catch up. Parents are also notified. It's like having a personal academic advisor for every single learner."
+      },
+      {
+        "question": "Can I try School Network before committing?",
+        "answer": "Yes — we offer a free 30-day trial for your school with no credit card required. You get full access to every feature including the parent WhatsApp notifications, fee management, and student AI coaching. If you love it, you choose a plan. If not, there's no obligation."
+      },
+      {
+        "question": "How much does School Network cost?",
+        "answer": "Pricing is per learner per month — making it affordable whether your school has 50 or 5,000 students. Setup is a once-off fee. Contact us for a custom quote based on your school size, or see our pricing page for standard rates."
+      },
+      {
+        "question": "Is School Network built for South African schools specifically?",
+        "answer": "Yes. School Network is built in South Africa, for South African schools. It supports SA-SAMS compliance, Rand-based fee payments, local payment gateways, and WhatsApp-first communication because that's how parents actually communicate. We're expanding across Africa — but SA schools are our home."
+      }
+    ],
+    "cta": {
+      "text": "Still have questions? We're here to help.",
+      "button": "Contact Support Team"
+    }
+  },
+  "cta": {
+    "badge": "💬 School Management Delivered to Every Parent's Phone",
+    "headline": "Your School. Connected. Parents Informed. Students Ahead.",
+    "subheading": "Join schools already using School Network to collect fees on time, keep parents in the loop via WhatsApp, and catch struggling students before it's too late. Setup takes less than a day.",
+    "bullets": {
+      "trial": "Free 30-day trial, no credit card",
+      "support": "Live support in your language",
+      "scalable": "Works for 50 to 5,000 students"
+    }
+  },
+  "footer": {
+    "tagline": "School Network — Where parents stay close, schools run smoothly, and no student gets left behind.",
+    "links": {
+      "product": "Product",
+      "resources": "Resources",
+      "company": "Company"
+    },
+    "copyright": "© 2026 School Network. All rights reserved."
+  },
+  "thankYou": {
+    "headline": "You're on the Waitlist!",
+    "subheading": "Thank you for completing the waitlist. You'll be the first to receive the link once it's done. We're excited to have you with us!",
+    "backHome": "Back to Home",
+    "followUs": "Follow our progress on"
+  },
+  "dashboard": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "students": "Students",
+      "schedule": "Schedule",
+      "reports": "Reports",
+      "messages": "Messages",
+      "settings": "Settings"
+    },
+    "header": {
+      "welcome": "Welcome back, Admin",
+      "subtitle": "Here's what's happening today"
+    },
+    "actions": {
+      "addStudent": "Add Student",
+      "sendMessage": "Send Message",
+      "generateReport": "Generate Report",
+      "scheduleEvent": "Schedule Event"
+    },
+    "stats": {
+      "totalStudents": "Total Students",
+      "activeClasses": "Active Classes",
+      "revenue": "Revenue",
+      "attendance": "Attendance"
+    },
+    "charts": {
+      "enrollment": "Enrollment",
+      "sixMonths": "6 months",
+      "upcomingEvents": "Upcoming Events",
+      "messages": "Messages",
+      "newMessages": "{{count}} new",
+      "onTrack": "On track"
+    },
+    "goals": {
+      "enrollment": "Enrollment Goal",
+      "revenue": "Revenue Target",
+      "attendance": "Attendance Rate",
+      "satisfaction": "Satisfaction"
+    }
+  }
+}

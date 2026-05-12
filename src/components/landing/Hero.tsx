@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import DashboardMockup from "./DashboardMockup";
+import { useTranslation } from "react-i18next";
 
 interface HeroProps {
   onOpenDemo: () => void;
@@ -8,6 +9,8 @@ interface HeroProps {
 }
 
 const Hero = ({ onOpenDemo, onOpenWaitlist }: HeroProps) => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative min-h-[90svh] pt-32 pb-20 px-4 overflow-hidden flex flex-col items-center justify-center text-center">
       {/* Subtle Background Elements */}
@@ -17,18 +20,17 @@ const Hero = ({ onOpenDemo, onOpenWaitlist }: HeroProps) => {
       <div className="container max-w-7xl mx-auto relative z-10">
         {/* Badge */}
         <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/5 border border-primary/10 text-primary text-xs font-bold mb-8 animate-fade-in uppercase tracking-wider">
-          School Management Platform — Parents · Schools · Students
+          {t('hero.badge')}
         </div>
 
         {/* Headline */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground mb-6 max-w-5xl mx-auto leading-[1.1] animate-fade-in-up">
-          Everything Your School Needs. <br className="hidden lg:block" />
-          <span className="text-primary">One Platform. One Click.</span>
+          {t('hero.headline')}
         </h1>
 
         {/* Subtitle */}
         <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed animate-fade-in-up font-medium" style={{ animationDelay: '0.1s' }}>
-          Parents pay fees, track progress and get absence alerts on WhatsApp. Schools manage students, finances and communication effortlessly. Students get AI-powered coaching before they fall behind — not after.
+          {t('hero.subheading')}
         </p>
 
         {/* CTAs */}
@@ -38,7 +40,7 @@ const Hero = ({ onOpenDemo, onOpenWaitlist }: HeroProps) => {
             className="w-full sm:w-auto h-14 px-8 text-base font-bold rounded-full shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300 group"
           >
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhDi3CYH0OKdQdRq8nvGNUTaSAZnsWNT8lZ59KWah1Ev4Whg/viewform?usp=sharing&ouid=103191188960058496730" target="_blank" rel="noopener noreferrer">
-              Request a Demo
+              {t('nav.requestDemo')}
             </a>
             <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
@@ -51,7 +53,7 @@ const Hero = ({ onOpenDemo, onOpenWaitlist }: HeroProps) => {
               if (element) element.scrollIntoView({ behavior: 'smooth' });
             }}
           >
-            Explore Features
+            {t('hero.exploreFeatures')}
           </Button>
         </div>
 

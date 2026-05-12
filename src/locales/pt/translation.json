@@ -1,0 +1,193 @@
+{
+  "nav": {
+    "features": "Funcionalidades",
+    "howItWorks": "Como Funciona",
+    "faq": "Perguntas Frequentes",
+    "contact": "Contacto",
+    "getStarted": "Começar",
+    "requestDemo": "Solicitar Demonstração",
+    "pricing": "Preços",
+    "documentation": "Documentação",
+    "helpCentre": "Centro de Ajuda",
+    "blog": "Blog",
+    "aboutUs": "Sobre Nós",
+    "careers": "Carreiras",
+    "privacyPolicy": "Política de Privacidade"
+  },
+  "hero": {
+    "badge": "Plataforma de Gestão Escolar — Pais · Escolas · Alunos",
+    "headline": "Tudo o que a sua escola precisa. Uma plataforma. Um clique.",
+    "subheading": "Os pais pagam propinas, acompanham o progresso e recebem alertas de ausência no WhatsApp. As escolas gerem alunos, finanças e comunicação sem esforço. Os alunos recebem apoio de IA antes de ficarem para trás — não depois.",
+    "exploreFeatures": "Explorar Funcionalidades"
+  },
+  "features": {
+    "badge": "Gestão Escolar Abrangente",
+    "headline": "Capacite a sua Instituição",
+    "subheading": "Do pagamento de propinas ao apoio de IA aos alunos — a School Network mantém os pais informados, as escolas organizadas e os alunos à frente. Tudo através do WhatsApp.",
+    "items": {
+      "admissions": {
+        "title": "Admissões Online",
+        "description": "Os pais candidatam-se pelo telefone em minutos, sem filas, sem papelada, sem formulários perdidos."
+      },
+      "messaging": {
+        "title": "Mensagens Pais-Escola",
+        "description": "Envie mensagens aos pais instantaneamente via WhatsApp, sem necessidade de descarregar a aplicação."
+      },
+      "timetables": {
+        "title": "Horários e Materiais",
+        "description": "Partilhe calendários académicos, horários de aulas e materiais de aprendizagem diretamente com alunos e pais."
+      },
+      "payments": {
+        "title": "Propinas e Pagamentos",
+        "description": "Gira faturas, envie lembretes de pagamento e acompanhe a cobrança de propinas com notificações automáticas."
+      },
+      "aiCoach": {
+        "title": "Mentor de Alunos IA",
+        "description": "O seu mentor IA deteta alunos com dificuldades imediatamente, não no fim do período quando é tarde demais."
+      },
+      "announcements": {
+        "title": "Anúncios Multicanal",
+        "description": "Um clique envia anúncios urgentes a todos os pais via WhatsApp, SMS e aplicação - simultaneamente."
+      }
+    }
+  },
+  "howItWorks": {
+    "badge": "Como Começar",
+    "headline": "Um Processo Simples de 4 Passos",
+    "subheading": "Transformar a infraestrutura digital da sua escola é mais fácil do que pensa.",
+    "steps": {
+      "onboard": {
+        "title": "Registe a sua Escola",
+        "description": "Configure o perfil da sua escola, adicione funcionários, turmas e estruturas de notas em minutos."
+      },
+      "import": {
+        "title": "Importe Alunos",
+        "description": "Carregue a sua lista de alunos e associe instantaneamente cada aluno ao seu encarregado de educação via WhatsApp."
+      },
+      "automate": {
+        "title": "Automatize Operações",
+        "description": "Faturas de propinas, alertas de ausência, lembretes de exames e relatórios funcionam automaticamente."
+      },
+      "launch": {
+        "title": "Lançamento da App",
+        "description": "Pais e alunos ficam ativos no WhatsApp e na aplicação — tudo acessível com um toque."
+      }
+    }
+  },
+  "faq": {
+    "badge": "Centro de Suporte",
+    "headline": "Perguntas Frequentes",
+    "subheading": "Tudo o que precisa de saber sobre a School Network e como ela pode ajudar a sua instituição.",
+    "items": [
+      {
+        "question": "Como é que os pais recebem actualizações sobre os seus filhos?",
+        "answer": "Os pais recebem notificações instantâneas no WhatsApp para tudo — ausências, resultados de exames, faturas de propinas, anúncios escolares e relatórios de progresso. Não é necessário descarregar nenhuma aplicação. Um toque na mensagem do WhatsApp abre o portal completo do encarregado de educação, onde podem ver horários, pagar propinas e acompanhar o desempenho do seu filho em tempo real."
+      },
+      {
+        "question": "Os dados da minha escola estão seguros?",
+        "answer": "Todos os dados da escola e dos alunos são encriptados e armazenados de forma segura na nuvem. Apenas o pessoal autorizado pode aceder aos registos dos alunos. Os pais só podem ver as informações do seu próprio filho. Cumprimos integralmente a POPIA (lei de protecção de dados da África do Sul) e nenhum dado é partilhado com terceiros."
+      },
+      {
+        "question": "O que acontece se um encarregado de educação não tiver WhatsApp?",
+        "answer": "Mais de 95% dos pais utilizam o WhatsApp diariamente. Para os que não utilizam, a School Network também envia notificações por SMS e suporta mensagens na aplicação. Nenhum pai fica para trás."
+      },
+      {
+        "question": "Quanto tempo demora a configurar a School Network?",
+        "answer": "A maioria das escolas entra em funcionamento num único dia. O seu administrador carrega a lista de alunos, associa os pais através do número de telefone e a sua escola está pronta para enviar a sua primeira notificação no WhatsApp. A nossa equipa de integração guia-o em todos os passos — não é necessária experiência em TI."
+      },
+      {
+        "question": "A School Network substitui o SA-SAMS?",
+        "answer": "Não — a School Network trabalha em conjunto com o SA-SAMS. O SA-SAMS trata dos relatórios governamentais e do cumprimento das normas. A School Network trata de tudo o resto: comunicação com os pais, cobrança de propinas, acompanhamento do progresso dos alunos, coaching com IA e operações diárias da escola. Complementam-se na perfeição."
+      },
+      {
+        "question": "Existe uma aplicação móvel para pais e professores?",
+        "answer": "Sim. Os pais e os alunos acedem a tudo através da aplicação School Network ou directamente via WhatsApp — o que preferirem. Os administradores e professores utilizam um painel de controlo web completo para gerir alunos, finanças, horários e comunicações a partir de qualquer dispositivo."
+      },
+      {
+        "question": "O que faz realmente o mentor de alunos com IA?",
+        "answer": "O mentor de IA monitoriza o desempenho de cada aluno continuamente — não apenas no final do período. No momento em que um aluno começa a ficar abaixo do nível esperado em qualquer disciplina, a IA envia-lhe um alerta personalizado com tópicos específicos para rever e recursos para recuperar. Os pais também são notificados. É como ter um conselheiro académico pessoal para cada aluno."
+      },
+      {
+        "question": "Posso experimentar a School Network antes de me comprometer?",
+        "answer": "Sim — oferecemos um período experimental gratuito de 30 dias para a sua escola, sem necessidade de cartão de crédito. Terá acesso total a todas as funcionalidades, incluindo as notificações do WhatsApp para os pais, a gestão de propinas e o coaching de alunos com IA. Se gostar, escolhe um plano. Caso contrário, não há qualquer obrigação."
+      },
+      {
+        "question": "Quanto custa a School Network?",
+        "answer": "O preço é por aluno, por mês — tornando-o acessível quer a sua escola tenha 50 ou 5.000 alunos. A configuração é uma taxa única. Contacte-nos para obter um orçamento personalizado com base no tamanho da sua escola ou consulte a nossa página de preços para as taxas padrão."
+      },
+      {
+        "question": "A School Network foi construída especificamente para escolas sul-africanas?",
+        "answer": "Sim. A School Network foi construída na África do Sul, para escolas sul-africanas. Suporta a conformidade com o SA-SAMS, pagamentos de propinas baseados em Rand, gateways de pagamento locais e comunicação prioritária por WhatsApp, porque é assim que os pais comunicam realmente. Estamos a expandir-nos por toda a África — mas as escolas da África do Sul são a nossa casa."
+      }
+    ],
+    "cta": {
+      "text": "Ainda tem dúvidas? Estamos aqui para ajudar.",
+      "button": "Contactar Equipa de Suporte"
+    }
+  },
+  "cta": {
+    "badge": "💬 Gestão Escolar Entregue no Telemóvel de Todos os Pais",
+    "headline": "A sua escola. Conectada. Pais Informados. Alunos à Frente.",
+    "subheading": "Junte-se às escolas que já usam a School Network para cobrar propinas a tempo, manter os pais informados via WhatsApp e apoiar alunos antes que seja tarde. Configuração em menos de um dia.",
+    "bullets": {
+      "trial": "Teste gratuito de 30 dias, sem cartão",
+      "support": "Suporte ao vivo no seu idioma",
+      "scalable": "Funciona para 50 a 5.000 alunos"
+    }
+  },
+  "footer": {
+    "tagline": "School Network — Onde os pais ficam próximos, as escolas funcionam bem e nenhum aluno fica para trás.",
+    "links": {
+      "product": "Produto",
+      "resources": "Recursos",
+      "company": "Empresa"
+    },
+    "copyright": "© 2026 School Network. Todos os direitos reservados."
+  },
+  "thankYou": {
+    "headline": "Está na Lista de Espera!",
+    "subheading": "Obrigado por se inscrever na lista de espera. Será o primeiro a receber o link assim que estiver concluído. Estamos entusiasmados por tê-lo connosco!",
+    "backHome": "Voltar ao Início",
+    "followUs": "Siga o nosso progresso no"
+  },
+  "dashboard": {
+    "nav": {
+      "dashboard": "Painel",
+      "students": "Alunos",
+      "schedule": "Horário",
+      "reports": "Relatórios",
+      "messages": "Mensagens",
+      "settings": "Definições"
+    },
+    "header": {
+      "welcome": "Bem-vindo, Admin",
+      "subtitle": "Aqui está o que está a acontecer hoje"
+    },
+    "actions": {
+      "addStudent": "Adicionar Aluno",
+      "sendMessage": "Enviar Mensagem",
+      "generateReport": "Gerar Relatório",
+      "scheduleEvent": "Agendar Evento"
+    },
+    "stats": {
+      "totalStudents": "Total de Alunos",
+      "activeClasses": "Turmas Ativas",
+      "revenue": "Receita",
+      "attendance": "Assiduidade"
+    },
+    "charts": {
+      "enrollment": "Matrículas",
+      "sixMonths": "6 meses",
+      "upcomingEvents": "Próximos Eventos",
+      "messages": "Mensagens",
+      "newMessages": "{{count}} novas",
+      "onTrack": "No caminho certo"
+    },
+    "goals": {
+      "enrollment": "Meta de Matrículas",
+      "revenue": "Meta de Receita",
+      "attendance": "Taxa de Assiduidade",
+      "satisfaction": "Satisfação"
+    }
+  }
+}
