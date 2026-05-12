@@ -1,27 +1,27 @@
 import { Users, DollarSign, BookOpen, TrendingUp, Bell, Settings, Home, Calendar, FileText, MessageSquare, Plus, Send, BarChart3, Target } from "lucide-react";
 
 const teamMembers = [
-  { name: "Sarah", role: "Principal", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" },
-  { name: "Michael", role: "Teacher", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" },
-  { name: "Emily", role: "Counselor", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" },
-  { name: "David", role: "Admin", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" },
-  { name: "Lisa", role: "Teacher", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face" },
+  { name: "Sarah", role: "Principal", initials: "S" },
+  { name: "Michael", role: "Teacher", initials: "M" },
+  { name: "Emily", role: "Counselor", initials: "E" },
+  { name: "David", role: "Admin", initials: "D" },
+  { name: "Lisa", role: "Teacher", initials: "L" },
 ];
 
 const DashboardMockup = () => {
   return (
     <div className="relative w-full max-w-7xl mx-auto">
       {/* Main Dashboard Container */}
-      <div className="dashboard-mockup rounded-2xl overflow-hidden shadow-2xl border border-border/20">
+      <div className="dashboard-mockup rounded-2xl overflow-hidden shadow-2xl border border-border/10 bg-card">
         {/* Browser Header */}
-        <div className="bg-secondary/80 px-4 py-3 flex items-center gap-3 border-b border-border/20">
+        <div className="bg-secondary/50 px-4 py-3 flex items-center gap-3 border-b border-border/10">
           <div className="flex gap-2">
-            <div className="w-3 h-3 rounded-full bg-destructive/60" />
-            <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
-            <div className="w-3 h-3 rounded-full bg-green-500/60" />
+            <div className="w-3 h-3 rounded-full bg-destructive/40" />
+            <div className="w-3 h-3 rounded-full bg-yellow-500/40" />
+            <div className="w-3 h-3 rounded-full bg-green-500/40" />
           </div>
           <div className="flex-1 mx-4">
-            <div className="bg-muted/50 rounded-lg px-4 py-1.5 text-sm text-muted-foreground text-center max-w-md mx-auto">
+            <div className="bg-background/50 rounded-lg px-4 py-1.5 text-xs text-muted-foreground text-center max-w-md mx-auto border border-border/10">
               app.schoolnetwork.io/dashboard
             </div>
           </div>
@@ -30,13 +30,13 @@ const DashboardMockup = () => {
         {/* Dashboard Layout */}
         <div className="flex bg-background min-h-[500px]">
           {/* Sidebar */}
-          <div className="w-16 lg:w-56 bg-card/80 border-r border-border/20 p-3 lg:p-4 flex-shrink-0">
+          <div className="w-16 lg:w-56 bg-card border-r border-border/10 p-3 lg:p-4 flex-shrink-0">
             {/* Logo */}
             <div className="flex items-center gap-2 mb-6 px-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center shadow-sm">
                 <span className="text-primary-foreground font-bold text-sm">S</span>
               </div>
-              <span className="hidden lg:block font-semibold text-foreground">SchoolNet</span>
+              <span className="hidden lg:block font-bold text-foreground tracking-tight">SchoolNet</span>
             </div>
 
             {/* Nav Items */}
@@ -51,9 +51,9 @@ const DashboardMockup = () => {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors ${
+                  className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 ${
                     item.active 
-                      ? "bg-primary/10 text-primary" 
+                      ? "bg-primary/10 text-primary font-medium" 
                       : "text-muted-foreground hover:bg-muted/50"
                   }`}
                 >
@@ -62,26 +62,6 @@ const DashboardMockup = () => {
                 </div>
               ))}
             </nav>
-
-            {/* Team Section in Sidebar */}
-            <div className="hidden lg:block mt-8 pt-6 border-t border-border/20">
-              <h4 className="text-xs font-medium text-muted-foreground mb-3 px-2">Team Online</h4>
-              <div className="flex -space-x-2 px-2">
-                {teamMembers.slice(0, 4).map((member, i) => (
-                  <div key={i} className="relative">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-8 h-8 rounded-full border-2 border-card object-cover"
-                    />
-                    <div className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-card" />
-                  </div>
-                ))}
-                <div className="w-8 h-8 rounded-full bg-muted/80 border-2 border-card flex items-center justify-center">
-                  <span className="text-xs text-muted-foreground">+3</span>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Main Content */}
@@ -89,29 +69,29 @@ const DashboardMockup = () => {
             {/* Header with Team Avatars */}
             <div className="flex items-center justify-between mb-6">
               <div>
-                <h2 className="text-lg lg:text-xl font-semibold text-foreground">Welcome back, Admin</h2>
+                <h2 className="text-lg lg:text-xl font-bold text-foreground tracking-tight">Welcome back, Admin</h2>
                 <p className="text-sm text-muted-foreground">Here's what's happening today</p>
               </div>
               <div className="flex items-center gap-3">
-                {/* Team Avatars */}
+                {/* Initials Avatars */}
                 <div className="hidden md:flex -space-x-2 mr-2">
                   {teamMembers.slice(0, 3).map((member, i) => (
-                    <img
+                    <div
                       key={i}
-                      src={member.image}
-                      alt={member.name}
-                      className="w-8 h-8 rounded-full border-2 border-background object-cover"
-                    />
+                      className="w-8 h-8 rounded-full border-2 border-background bg-secondary flex items-center justify-center text-[10px] font-bold text-muted-foreground"
+                    >
+                      {member.initials}
+                    </div>
                   ))}
                 </div>
-                <div className="w-9 h-9 rounded-lg bg-muted/50 flex items-center justify-center relative">
+                <div className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center relative border border-border/10">
                   <Bell size={18} className="text-muted-foreground" />
-                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-destructive rounded-full flex items-center justify-center">
-                    <span className="text-[10px] text-white font-medium">3</span>
+                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-primary rounded-full flex items-center justify-center border-2 border-background">
+                    <span className="text-[8px] text-white font-bold">3</span>
                   </div>
                 </div>
-                <div className="w-9 h-9 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  <span className="text-primary-foreground font-medium text-sm">A</span>
+                <div className="w-9 h-9 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
+                  <span className="text-primary-foreground font-bold text-sm">A</span>
                 </div>
               </div>
             </div>
@@ -209,13 +189,11 @@ const DashboardMockup = () => {
                 <div className="space-y-3">
                   {teamMembers.slice(0, 3).map((member, i) => (
                     <div key={i} className="flex items-center gap-2">
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-7 h-7 rounded-full object-cover"
-                      />
+                      <div className="w-7 h-7 rounded-full bg-secondary flex items-center justify-center text-[10px] font-bold text-muted-foreground">
+                        {member.initials}
+                      </div>
                       <div className="flex-1 min-w-0">
-                        <p className="text-sm text-foreground truncate">{member.name}</p>
+                        <p className="text-sm font-medium text-foreground truncate">{member.name}</p>
                         <p className="text-xs text-muted-foreground truncate">New message...</p>
                       </div>
                     </div>

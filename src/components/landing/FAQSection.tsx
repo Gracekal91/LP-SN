@@ -1,4 +1,5 @@
 import { HelpCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import {
   Accordion,
   AccordionContent,
@@ -8,72 +9,77 @@ import {
 
 const faqs = [
   {
-    question: "How does School Network improve parent-teacher communication?",
-    answer: "School Network provides instant messaging, automated notifications, and a centralized hub for all school communications. Parents receive real-time updates about their child's activities, grades, and school events directly on their mobile devices.",
+    question: "How do parents receive updates about their child?",
+    answer: "Parents get instant WhatsApp notifications for everything — absences, exam results, fee invoices, school announcements, and progress reports. No app download needed. One tap on the WhatsApp message opens their full parent portal where they can view timetables, pay fees, and track their child's performance in real time.",
   },
   {
     question: "Is my school's data secure?",
-    answer: "Absolutely. We use bank-level encryption, comply with GDPR and FERPA regulations, and store all data on secure, SOC 2 certified servers. Your school's data is never shared with third parties.",
+    answer: "All school and student data is encrypted and stored securely in the cloud. Only authorised staff can access student records. Parents can only see their own child's information. We are fully compliant with POPIA (South Africa's data protection law) and no data is ever shared with third parties.",
   },
   {
-    question: "Can I switch plans or cancel anytime?",
-    answer: "Yes! You can upgrade, downgrade, or cancel your plan at any time. There are no long-term contracts. If you cancel, you'll retain access until the end of your billing period.",
+    question: "What happens if a parent doesn't have WhatsApp?",
+    answer: "Over 95% of parents use WhatsApp daily. For those who don't, School Network also sends SMS notifications and supports in-app messaging. No parent gets left behind.",
   },
   {
     question: "How long does it take to set up School Network?",
-    answer: "Most schools are up and running within 24 hours. Our onboarding team helps you import student data, set up classes, and train your staff. Enterprise customers receive dedicated implementation support.",
+    answer: "Most schools are fully live within one day. Your admin uploads the student list, links parents via phone number, and your school is ready to send its first WhatsApp notification. Our onboarding team guides you through every step — no IT experience required.",
   },
   {
-    question: "Does School Network integrate with existing school systems?",
-    answer: "Yes, we integrate with popular SIS platforms, Google Classroom, Microsoft Teams, and many other educational tools. Our API also allows custom integrations for Enterprise customers.",
+    question: "Does School Network replace SA-SAMS?",
+    answer: "No — School Network works alongside SA-SAMS. SA-SAMS handles government reporting and compliance. School Network handles everything else: parent communication, fee collection, student progress tracking, AI coaching, and daily school operations. They complement each other perfectly.",
   },
   {
     question: "Is there a mobile app for parents and teachers?",
-    answer: "Yes! School Network offers native iOS and Android apps for both parents and teachers. The apps include push notifications, messaging, event calendars, and grade tracking.",
+    answer: "Yes. Parents and students access everything through the School Network app or directly via WhatsApp — whichever they prefer. School admins and teachers use a full web dashboard to manage students, finances, timetables, and communications from any device.",
   },
   {
-    question: "What kind of support do you offer?",
-    answer: "Free and Starter plans include email support. Pro plans get priority support with faster response times. Enterprise customers receive 24/7 phone support and a dedicated account manager.",
+    question: "What does the AI student coach actually do?",
+    answer: "The AI coach monitors each student's performance continuously — not just at the end of term. The moment a student starts falling below their expected level in any subject, the AI sends them a personalised alert with specific topics to revise and resources to catch up. Parents are also notified. It's like having a personal academic advisor for every single learner.",
   },
   {
     question: "Can I try School Network before committing?",
-    answer: "Absolutely! We offer a 14-day free trial on all paid plans with full access to features. No credit card required to start. Our Free plan is also available forever for small schools.",
+    answer: "Yes — we offer a free 30-day trial for your school with no credit card required. You get full access to every feature including the parent WhatsApp notifications, fee management, and student AI coaching. If you love it, you choose a plan. If not, there's no obligation.",
+  },
+  {
+    question: "How much does School Network cost?",
+    answer: "Pricing is per learner per month — making it affordable whether your school has 50 or 5,000 students. Setup is a once-off fee. Contact us for a custom quote based on your school size, or see our pricing page for standard rates.",
+  },
+  {
+    question: "Is School Network built for South African schools specifically?",
+    answer: "Yes. School Network is built in South Africa, for South African schools. It supports SA-SAMS compliance, Rand-based fee payments, local payment gateways, and WhatsApp-first communication because that's how parents actually communicate. We're expanding across Africa — but SA schools are our home.",
   },
 ];
 
 const FAQSection = () => {
   return (
-    <section className="py-20 px-4 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-background to-muted/20" />
-      
-      <div className="max-w-3xl mx-auto relative z-10">
+    <section id="faq" className="py-24 px-4 relative bg-background">
+      <div className="max-w-4xl mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-12">
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold mb-4 uppercase tracking-wider">
             <HelpCircle className="w-4 h-4" />
-            FAQ
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Frequently Asked{" "}
-            <span className="premium-gradient-text">Questions</span>
+            Support Center
+          </div>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
+            Frequently Asked <span className="text-primary">Questions</span>
           </h2>
-          <p className="text-muted-foreground text-base">
-            Everything you need to know about School Network
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Everything you need to know about School Network and how it can help your institution.
           </p>
         </div>
 
         {/* Accordion */}
-        <Accordion type="single" collapsible className="space-y-3">
+        <Accordion type="single" collapsible className="space-y-4">
           {faqs.map((faq, index) => (
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl px-5 data-[state=open]:border-primary/30 transition-colors"
+              className="bg-card border border-border/50 rounded-2xl px-6 transition-all duration-200 hover:border-primary/30"
             >
-              <AccordionTrigger className="text-left text-sm font-medium hover:no-underline py-4">
+              <AccordionTrigger className="text-left text-lg font-bold hover:no-underline py-6">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground text-sm pb-4">
+              <AccordionContent className="text-muted-foreground text-base leading-relaxed pb-6">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
@@ -81,12 +87,17 @@ const FAQSection = () => {
         </Accordion>
 
         {/* Contact CTA */}
-        <p className="text-center text-muted-foreground text-sm mt-10">
-          Still have questions?{" "}
-          <a href="/contact" className="text-primary hover:underline">
-            Contact our team
-          </a>
-        </p>
+        <div className="text-center mt-12 p-8 rounded-3xl bg-secondary/50 border border-border/50">
+          <p className="text-muted-foreground font-medium mb-4">
+            Still have questions? We're here to help.
+          </p>
+          <Button
+            variant="outline"
+            className="rounded-full px-8 h-12 font-bold border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
+          >
+            Contact Support Team
+          </Button>
+        </div>
       </div>
     </section>
   );

@@ -6,86 +6,93 @@
 
 @layer base {
   :root {
-    /* Dark Navy Theme - Always dark */
-    --background: 220 30% 8%;
-    --foreground: 210 40% 98%;
+    /* Modern Light Theme - Clean and Educational */
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
 
-    --card: 220 30% 12%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
 
-    --popover: 220 30% 10%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
 
-    /* Soft Blue Primary */
-    --primary: 210 100% 60%;
-    --primary-foreground: 220 30% 8%;
+    /* Professional Education Blue */
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
 
-    /* Glass Secondary */
-    --secondary: 220 30% 18%;
-    --secondary-foreground: 210 40% 98%;
+    /* Soft Gray Secondary */
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11.2%;
 
-    --muted: 220 25% 20%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    /* Blue Accent */
-    --accent: 210 100% 55%;
-    --accent-foreground: 220 30% 8%;
+    /* Teal/Cyan Accent */
+    --accent: 199 89% 48%;
+    --accent-foreground: 222 47% 11.2%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 20% 20%;
-    --input: 220 25% 15%;
-    --ring: 210 100% 60%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221 83% 53%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Custom Glass Effect Variables */
-    --glass-bg: 220 30% 12%;
-    --glass-border: 220 20% 25%;
-    --glass-blur: 12px;
+    /* Custom Glass Effect Variables - Light Mode */
+    --glass-bg: 0 0% 100% / 0.7;
+    --glass-border: 214.3 31.8% 91.4%;
+    --glass-blur: 8px;
 
     /* Gradient Colors */
-    --gradient-start: 220 30% 6%;
-    --gradient-end: 220 30% 12%;
-    --gradient-accent: 210 100% 50%;
+    --gradient-start: 210 40% 98%;
+    --gradient-end: 210 40% 96%;
+    --gradient-accent: 221 83% 53%;
 
-    /* Shadows */
-    --shadow-card: 0 20px 40px hsla(220, 30%, 4%, 0.35);
-    --shadow-header: 0 10px 30px hsla(220, 30%, 4%, 0.25);
-    --shadow-glow: 0 0 40px hsla(210, 100%, 60%, 0.2);
+    /* Shadows - Softer for Light Mode */
+    --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    --shadow-header: 0 4px 20px -5px rgba(0, 0, 0, 0.05);
+    --shadow-glow: 0 0 30px hsla(221, 83%, 53%, 0.15);
 
-    --sidebar-background: 220 30% 10%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 210 100% 60%;
-    --sidebar-primary-foreground: 220 30% 8%;
-    --sidebar-accent: 220 30% 18%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 220 20% 20%;
-    --sidebar-ring: 210 100% 60%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 221 83% 53%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 210 40% 96.1%;
+    --sidebar-accent-foreground: 222 47% 11.2%;
+    --sidebar-border: 214.3 31.8% 91.4%;
+    --sidebar-ring: 221 83% 53%;
   }
 
-  /* Remove dark class variants - always dark theme */
   .dark {
-    --background: 220 30% 8%;
+    --background: 222 47% 11%;
     --foreground: 210 40% 98%;
-    --card: 220 30% 12%;
+
+    --card: 222 47% 11%;
     --card-foreground: 210 40% 98%;
-    --popover: 220 30% 10%;
+
+    --popover: 222 47% 11%;
     --popover-foreground: 210 40% 98%;
+
     --primary: 210 100% 60%;
-    --primary-foreground: 220 30% 8%;
-    --secondary: 220 30% 18%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-    --muted: 220 25% 20%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 210 100% 55%;
-    --accent-foreground: 220 30% 8%;
-    --destructive: 0 84% 60%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 220 20% 20%;
-    --input: 220 25% 15%;
-    --ring: 210 100% 60%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
   }
 }
 
@@ -96,8 +103,8 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', sans-serif;
-    letter-spacing: -0.02em;
+    font-family: 'Outfit', 'Inter', sans-serif;
+    letter-spacing: -0.01em;
   }
 
   html {

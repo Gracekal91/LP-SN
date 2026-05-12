@@ -1,17 +1,16 @@
 import { UserPlus, MessageSquare, Calendar, CreditCard, Users, Megaphone } from "lucide-react";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
-import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 const features = [
   {
     icon: UserPlus,
     title: "Online Admissions",
-    description: "Accept student applications online and track admission progress in real time with automated workflows.",
+    description: "Parents apply from their phone in minutes,  no queues, no paperwork, no lost forms.",
   },
   {
     icon: MessageSquare,
     title: "Parent–School Messaging",
-    description: "Enable seamless communication between parents and school staff through secure in-app messaging.",
+    description: "Message parents instantly via WhatsApp, no app download required, no message goes unread.",
   },
   {
     icon: Calendar,
@@ -25,13 +24,13 @@ const features = [
   },
   {
     icon: Users,
-    title: "Student Profiles",
-    description: "Maintain comprehensive student records, term results, and academic performance tracking.",
+    title: "AI Student Coach",
+    description: "Your AI coach spots struggling students immediately, not at the end of term when it's too late.",
   },
   {
     icon: Megaphone,
     title: "Multi-Channel Announcements",
-    description: "Broadcast school announcements via mobile app notifications and SMS for maximum reach.",
+    description: "One click sends urgent announcements to every parent via WhatsApp, SMS and app - simultaneously.",
   },
 ];
 
@@ -40,59 +39,44 @@ const Features = () => {
   const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section id="features" className="py-16 px-4 scroll-mt-24 relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute top-20 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-20 left-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
-      
-      <div className="container max-w-6xl mx-auto relative z-10">
+    <section id="features" className="py-24 px-4 scroll-mt-24 relative bg-secondary/30">
+      <div className="container max-w-7xl mx-auto">
         {/* Section Header */}
-        <div 
+        <div
           ref={headerRef}
-          className={`text-center mb-12 scroll-animate ${headerVisible ? 'is-visible' : ''}`}
+          className={`text-center mb-16 scroll-animate ${headerVisible ? 'is-visible' : ''}`}
         >
-          <p className="text-primary text-xs font-medium tracking-wider uppercase mb-3">
-            Core Features
-          </p>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal mb-4">
-            <span className="text-muted-foreground/80">Comprehensive School</span>{" "}
-            <span className="premium-gradient-text">Management</span>
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold mb-4 uppercase tracking-wider">
+            Powerful Modules
+          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-tight">
+            Comprehensive <span className="text-primary">School Management</span>
           </h2>
-          <p className="text-base text-muted-foreground max-w-xl mx-auto">
-            Everything your school needs to operate efficiently, engage parents, and support student success.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            From fee payments to AI-powered student coaching — School Network keeps parents informed, schools organised, and students ahead. All through WhatsApp.
           </p>
         </div>
 
         {/* Features Grid */}
-        <div 
+        <div
           ref={gridRef}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-4"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`relative rounded-2xl card-entrance ${gridVisible ? 'is-visible' : ''}`}
-              style={{ animationDelay: `${index * 100}ms` }}
+              className={`bg-card p-8 rounded-3xl border border-border/50 shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 group card-entrance ${gridVisible ? 'is-visible' : ''}`}
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <GlowingEffect
-                spread={50}
-                glow={true}
-                blur={10}
-                proximity={100}
-                inactiveZone={0.3}
-                borderWidth={2}
-              />
-              <div className="feature-card h-full group relative z-10">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon size={20} className="text-primary" />
-                </div>
-                <h3 className="text-base font-semibold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
-                  {feature.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {feature.description}
-                </p>
+              <div className="w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
+                <feature.icon size={24} className="text-primary group-hover:text-primary-foreground transition-colors duration-300" />
               </div>
+              <h3 className="text-xl font-bold text-foreground mb-3 tracking-tight">
+                {feature.title}
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                {feature.description}
+              </p>
             </div>
           ))}
         </div>

@@ -11,63 +11,47 @@ const CTASection = ({ onOpenDemo, onOpenWaitlist }: CTASectionProps) => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section className="cta-gradient py-16 px-4 relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute top-1/4 left-1/4 w-56 h-56 bg-primary/10 rounded-full blur-3xl pointer-events-none animate-pulse-slow" />
-      <div className="absolute bottom-1/4 right-1/4 w-56 h-56 bg-accent/10 rounded-full blur-3xl pointer-events-none animate-pulse-slow" style={{ animationDelay: '2s' }} />
+    <section className="py-24 px-4 relative overflow-hidden bg-primary">
+      {/* Subtle Background Pattern */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent" />
       
       <div 
         ref={ref}
-        className={`container max-w-3xl mx-auto text-center relative z-10 card-entrance ${isVisible ? 'is-visible' : ''}`}
+        className={`container max-w-4xl mx-auto text-center relative z-10 card-entrance ${isVisible ? 'is-visible' : ''}`}
       >
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-card mb-6">
-          <Sparkles size={14} className="text-primary" />
-          <span className="text-xs text-primary font-medium">Limited Spots Available</span>
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md mb-8 border border-white/20">
+          <span className="text-sm text-white font-bold tracking-wide uppercase">💬 School Management Delivered to Every Parent's Phone</span>
         </div>
 
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal mb-4">
-          <span className="text-muted-foreground/80">Ready to Transform</span>{" "}
-          <br className="hidden sm:block" />
-          <span className="premium-gradient-text">Your School Management?</span>
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-white tracking-tight leading-tight">
+          Your School. Connected. <br className="hidden md:block" />
+          Parents Informed. Students Ahead.
         </h2>
-        <p className="text-base text-muted-foreground mb-8 max-w-xl mx-auto">
-          Join forward-thinking schools modernizing their operations and improving parent engagement.
+        <p className="text-lg md:text-xl text-white/80 mb-10 max-w-3xl mx-auto leading-relaxed font-medium">
+          Join schools already using School Network to collect fees on time, keep parents in the loop via WhatsApp, and catch struggling students before it's too late. Setup takes less than a day.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
-          {/*<Button*/}
-          {/*  size="lg"*/}
-          {/*  className="gradient-accent text-primary-foreground font-semibold rounded-xl px-6 py-4 text-base btn-glow group"*/}
-          {/*>*/}
-          {/*    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhDi3CYH0OKdQdRq8nvGNUTaSAZnsWNT8lZ59KWah1Ev4Whg/viewform?usp=sharing&ouid=103191188960058496730" target="_blank">*/}
-          {/*          Request a Demo*/}
-          {/*    </a>*/}
-          {/*  <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />*/}
-          {/*</Button>*/}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
           <Button
-            // onClick={onOpenWaitlist}
-            variant="outline"
             size="lg"
-            className="border-border/50 bg-secondary/50 text-foreground hover:bg-secondary hover:border-primary/30 rounded-xl px-6 py-4 text-base backdrop-blur-sm"
+            className="bg-white text-primary hover:bg-white/90 font-bold h-14 px-10 rounded-full text-lg shadow-xl shadow-black/10 transition-all duration-300 hover:-translate-y-1"
           >
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhDi3CYH0OKdQdRq8nvGNUTaSAZnsWNT8lZ59KWah1Ev4Whg/viewform?usp=sharing&ouid=103191188960058496730" target="_blank">
-                  Join Early Access
-              </a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhDi3CYH0OKdQdRq8nvGNUTaSAZnsWNT8lZ59KWah1Ev4Whg/viewform?usp=sharing&ouid=103191188960058496730" target="_blank" rel="noopener noreferrer">
+              Request a Demo
+            </a>
+            <ArrowRight size={20} className="ml-2" />
           </Button>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4 text-xs text-muted-foreground">
-          <span className="flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-            Personalized onboarding
+        <div className="flex flex-wrap justify-center gap-8 text-base text-white font-bold">
+          <span className="flex items-center gap-2">
+            ✅ Free 30-day trial, no credit card
           </span>
-          <span className="flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-            Dedicated support
+          <span className="flex items-center gap-2">
+            ✅ Live support in your language
           </span>
-          <span className="flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-            No credit card required
+          <span className="flex items-center gap-2">
+            ✅ Works for 50 to 5,000 students
           </span>
         </div>
       </div>
