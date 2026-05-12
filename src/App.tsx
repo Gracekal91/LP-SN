@@ -17,6 +17,7 @@ import HelpCenter from "./pages/HelpCenter";
 import Blog from "./pages/Blog";
 import Community from "./pages/Community";
 import Careers from "./pages/Careers";
+import ThankYou from "./pages/ThankYou";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/community" element={<Community />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/thank-you" element={<ThankYou />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

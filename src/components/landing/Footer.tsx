@@ -22,7 +22,7 @@ const footerLinks = {
 
 const socialLinks = [
   { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Linkedin, href: "https://www.linkedin.com/company/gtechlabs/", label: "LinkedIn" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/the-school-network/?viewAsMember=true", label: "LinkedIn" },
   { icon: Facebook, href: "#", label: "Facebook" },
   { icon: Instagram, href: "#", label: "Instagram" },
 ];
