@@ -125,7 +125,7 @@ const Header = ({ onOpenDemo, onOpenWaitlist }: HeaderProps) => {
             <Button
               className="font-bold rounded-full px-6 transition-all duration-300 hover:-translate-y-0.5 bg-white text-primary hover:bg-white/90 shadow-lg"
             >
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhDi3CYH0OKdQdRq8nvGNUTaSAZnsWNT8lZ59KWah1Ev4Whg/viewform?usp=sharing&ouid=103191188960058496730" target="_blank" rel="noopener noreferrer">
+              <a href="https://tally.so/r/NpMyL0" target="_blank" rel="noopener noreferrer">
                 {t('nav.getStarted')}
               </a>
             </Button>
@@ -179,7 +179,7 @@ const Header = ({ onOpenDemo, onOpenWaitlist }: HeaderProps) => {
               <Button
                 className="w-full font-bold h-14 rounded-full text-lg shadow-lg bg-white text-primary hover:bg-white/90"
               >
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhDi3CYH0OKdQdRq8nvGNUTaSAZnsWNT8lZ59KWah1Ev4Whg/viewform?usp=sharing&ouid=103191188960058496730" target="_blank" rel="noopener noreferrer">
+                <a href="https://tally.so/r/NpMyL0" target="_blank" rel="noopener noreferrer">
                   {t('nav.getStarted')}
                 </a>
               </Button>

@@ -37,7 +37,7 @@ const CTASection = ({ onOpenDemo, onOpenWaitlist }: CTASectionProps) => {
             size="lg"
             className="bg-white text-primary hover:bg-white/90 font-bold h-14 px-10 rounded-full text-lg shadow-xl shadow-black/10 transition-all duration-300 hover:-translate-y-1"
           >
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhDi3CYH0OKdQdRq8nvGNUTaSAZnsWNT8lZ59KWah1Ev4Whg/viewform?usp=sharing&ouid=103191188960058496730" target="_blank" rel="noopener noreferrer">
+            <a href="https://tally.so/r/NpMyL0" target="_blank" rel="noopener noreferrer">
               {t('nav.requestDemo')}
             </a>
             <ArrowRight size={20} className="ml-2" />

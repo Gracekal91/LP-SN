@@ -39,7 +39,7 @@ const Hero = ({ onOpenDemo, onOpenWaitlist }: HeroProps) => {
             size="lg"
             className="w-full sm:w-auto h-14 px-8 text-base font-bold rounded-full shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300 group"
           >
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhDi3CYH0OKdQdRq8nvGNUTaSAZnsWNT8lZ59KWah1Ev4Whg/viewform?usp=sharing&ouid=103191188960058496730" target="_blank" rel="noopener noreferrer">
+            <a href="https://tally.so/r/NpMyL0" target="_blank" rel="noopener noreferrer">
               {t('nav.requestDemo')}
             </a>
             <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
