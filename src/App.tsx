@@ -18,6 +18,7 @@ import Blog from "./pages/Blog";
 import Community from "./pages/Community";
 import Careers from "./pages/Careers";
 import ThankYou from "./pages/ThankYou";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <GoogleAnalytics />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
