@@ -1,5 +1,6 @@
 import { Users, DollarSign, BookOpen, TrendingUp, Bell, Settings, Home, Calendar, FileText, MessageSquare, Plus, Send, BarChart3, Target } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import sn_logo_blue from "@/assets/sn_logo_blue.png";
 
 const teamMembers = [
   { name: "Sarah", role: "Principal", initials: "S" },
@@ -36,10 +37,7 @@ const DashboardMockup = () => {
           <div className="w-16 lg:w-56 bg-card border-r border-border/10 p-3 lg:p-4 flex-shrink-0">
             {/* Logo */}
             <div className="flex items-center gap-2 mb-6 px-2">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center shadow-sm">
-                <span className="text-primary-foreground font-bold text-sm">S</span>
-              </div>
-              <span className="hidden lg:block font-bold text-foreground tracking-tight">SchoolNet</span>
+              <img src={sn_logo_blue} alt="SN Logo" style={{ borderRadius: '0.6rem' }} className="h-6 w-auto bg-white p-0.5" />
             </div>
 
             {/* Nav Items */}
@@ -54,11 +52,10 @@ const DashboardMockup = () => {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 ${
-                    item.active 
-                      ? "bg-primary/10 text-primary font-medium" 
+                  className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 ${item.active
+                      ? "bg-primary/10 text-primary font-medium"
                       : "text-muted-foreground hover:bg-muted/50"
-                  }`}
+                    }`}
                 >
                   <item.icon size={18} />
                   <span className="hidden lg:block text-sm">{item.label}</span>
@@ -151,7 +148,7 @@ const DashboardMockup = () => {
                 <div className="h-24 flex items-end gap-1.5">
                   {[40, 65, 50, 80, 60, 90, 75].map((h, i) => (
                     <div key={i} className="flex-1 flex flex-col items-center gap-1">
-                      <div 
+                      <div
                         className="w-full bg-gradient-to-t from-primary/80 to-primary/40 rounded-t"
                         style={{ height: `${h}%` }}
                       />

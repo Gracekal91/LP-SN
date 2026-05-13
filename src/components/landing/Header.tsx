@@ -8,6 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import sn_logo_blue from "@/assets/sn_logo_blue.png";
 
 interface HeaderProps {
   onOpenDemo: () => void;
@@ -54,23 +55,22 @@ const Header = ({ onOpenDemo, onOpenWaitlist }: HeaderProps) => {
   };
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "py-3" : "py-6"
-      }`}
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "py-3" : "py-6"
+        }`}
     >
       <div className="container max-w-7xl mx-auto px-4">
-        <nav 
+        <nav
           className="rounded-2xl px-6 py-2 flex items-center justify-between transition-all duration-300 bg-primary shadow-xl shadow-primary/20 border border-white/10"
         >
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-xl flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-105 bg-white text-primary">
-              <span className="font-bold text-xl">S</span>
-            </div>
-            <span className="text-xl font-bold tracking-tight hidden sm:block transition-colors duration-300 text-white">
-              School Network
-            </span>
+            <img
+              src={sn_logo_blue}
+              alt="SN Logo"
+              style={{ borderRadius: '0.6rem' }}
+              className="h-10 w-auto transition-transform duration-300 group-hover:scale-105 p-1"
+            />
           </a>
 
           {/* Desktop Navigation */}
@@ -91,9 +91,9 @@ const Header = ({ onOpenDemo, onOpenWaitlist }: HeaderProps) => {
             {/* Language Switcher */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
+                <Button
+                  variant="ghost"
+                  size="sm"
                   className={`flex items-center gap-2 font-bold px-3 ${isScrolled ? 'text-white hover:bg-white/10' : 'text-foreground'}`}
                 >
                   <Globe className="w-4 h-4" />
@@ -153,7 +153,7 @@ const Header = ({ onOpenDemo, onOpenWaitlist }: HeaderProps) => {
                   {link.label}
                 </button>
               ))}
-              
+
               {/* Mobile Language Switcher */}
               <div className="grid grid-cols-3 gap-2">
                 {languages.map((lang) => (
@@ -163,11 +163,10 @@ const Header = ({ onOpenDemo, onOpenWaitlist }: HeaderProps) => {
                       changeLanguage(lang.code);
                       setIsMobileMenuOpen(false);
                     }}
-                    className={`flex flex-col items-center justify-center py-2 rounded-xl border transition-all ${
-                      i18n.language?.startsWith(lang.code)
-                        ? "bg-white text-primary border-white"
-                        : "bg-white/10 text-white border-white/20"
-                    }`}
+                    className={`flex flex-col items-center justify-center py-2 rounded-xl border transition-all ${i18n.language?.startsWith(lang.code)
+                      ? "bg-white text-primary border-white"
+                      : "bg-white/10 text-white border-white/20"
+                      }`}
                   >
                     <span className="text-xl mb-1">{lang.flag}</span>
                     <span className="text-xs font-bold">{lang.code.toUpperCase()}</span>

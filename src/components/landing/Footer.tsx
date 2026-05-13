@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Twitter, Linkedin, Facebook, Instagram } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import sn_logo_blue from "@/assets/sn_logo_blue.png";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -38,10 +39,12 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
-                <span className="text-primary-foreground font-bold text-xl">S</span>
-              </div>
-              <span className="text-2xl font-bold tracking-tight text-foreground">School Network</span>
+              <img
+                src={sn_logo_blue}
+                alt="SN Logo"
+                style={{ borderRadius: '0.6rem' }}
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-sm">
               {t('footer.tagline')}
